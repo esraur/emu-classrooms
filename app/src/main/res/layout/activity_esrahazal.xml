@@ -9,7 +9,8 @@
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/deptSpinner" />
+        android:id="@+id/deptSpinner"
+        />
 
     <fragment
        android:layout_width="match_parent"

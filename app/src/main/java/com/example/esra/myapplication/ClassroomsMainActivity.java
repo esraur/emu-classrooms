@@ -29,31 +29,88 @@ public class ClassroomsMainActivity extends AppCompatActivity {
     private ArrayList<Classrooms> departments;
     private ArrayList<String> departmentCodes;
     private ArrayAdapter<String> adapter = null;
-    private ArrayList<Classrooms2> classrooms2;
-    private ArrayList<String> ClassroomsCodes;
-    private ArrayList<String> orcun;
-    EditText e1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_classrooms_main);
         classroomslistview = (ListView) findViewById(R.id.listView);
-        // e1= (EditText) findViewById(R.id.editText);
         departments = new ArrayList<>();
         departmentCodes = new ArrayList<>();
-        classrooms2 = new ArrayList<>();
-        ClassroomsCodes = new ArrayList<>();
+
         new GetDepartments("http://178.62.227.214/departments.json", 0).execute();
         classroomslistview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //taking department's information from listview items according to the their id's
                 switch (position) {
                     case 0:
                         new GetDepartments("http://178.62.227.214/departments/1.json", 1).execute();
                         break;
                     case 1:
+                        new GetDepartments("http://178.62.227.214/departments/2.json", 1).execute();
                         break;
+                    case 2:
+                        new GetDepartments("http://178.62.227.214/departments/3.json", 1).execute();
+                        break;
+                    case 3:
+                        new GetDepartments("http://178.62.227.214/departments/5.json", 1).execute();
+                        break;
+                    case 4:
+                        new GetDepartments("http://178.62.227.214/departments/14.json", 1).execute();
+                        break;
+                    case 5:
+                        new GetDepartments("http://178.62.227.214/departments/8.json", 1).execute();
+                        break;
+                    case 6:
+                        new GetDepartments("http://178.62.227.214/departments/12.json", 1).execute();
+                        break;
+                    case 7:
+                        new GetDepartments("http://178.62.227.214/departments/15.json", 1).execute();
+                        break;
+                    case 8:
+                        new GetDepartments("http://178.62.227.214/departments/16.json", 1).execute();
+                        break;
+                    case 9:
+                        new GetDepartments("http://178.62.227.214/departments/6.json", 1).execute();
+                        break;
+                    case 10:
+                        new GetDepartments("http://178.62.227.214/departments/17.json", 1).execute();
+                        break;
+                    case 11:
+                        new GetDepartments("http://178.62.227.214/departments/17.json", 1).execute();
+                        break;
+                    case 12:
+                        new GetDepartments("http://178.62.227.214/departments/18.json", 1).execute();
+                        break;
+                    case 13:
+                        new GetDepartments("http://178.62.227.214/departments/4.json", 1).execute();
+                        break;
+                    case 14:
+                        new GetDepartments("http://178.62.227.214/departments/13.json", 1).execute();
+                        break;
+                    case 15:
+                        new GetDepartments("http://178.62.227.214/departments/19.json", 1).execute();
+                        break;
+                    case 16:
+                        new GetDepartments("http://178.62.227.214/departments/20.json", 1).execute();
+                        break;
+                    case 17:
+                        new GetDepartments("http://178.62.227.214/departments/21.json", 1).execute();
+                        break;
+                    case 18:
+                        new GetDepartments("http://178.62.227.214/departments/22.json", 1).execute();
+                        break;
+                    case 19:
+                        new GetDepartments("http://178.62.227.214/departments/23.json", 1).execute();
+                        break;
+                    case 20:
+                        new GetDepartments("http://178.62.227.214/departments/10.json", 1).execute();
+                        break;
+                    case 21:
+                        new GetDepartments("http://178.62.227.214/departments/11.json", 1).execute();
+                        break;
+
                 }
             }
         });
@@ -104,10 +161,9 @@ public class ClassroomsMainActivity extends AppCompatActivity {
                     break;
                 case 1:
                    try {
-                        //object = new JSONObject(Helpers.makeHTTPRequest(request));
 
-                    } catch ( Exception e/*JSONException e*/) {
-                        //e.printStackTrace();
+                    } catch ( Exception e) {
+
                     }
             }
 
@@ -125,7 +181,6 @@ public class ClassroomsMainActivity extends AppCompatActivity {
                     classroomslistview.setAdapter(adapter);
                     break;
                 case 1:
-                    //Log.i("Json : ", object.toString());
                     String url=request;
                     Intent intent=new Intent(ClassroomsMainActivity.this,ShowingClassroomsActivity.class);
                     intent.putExtra("url",url);
