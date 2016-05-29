@@ -12,7 +12,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="262dp"
+        android:layout_height="250dp"
         android:layout_marginLeft="14dp"
         android:layout_marginRight="14dp"
         android:orientation="horizontal">
@@ -31,45 +31,107 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:gravity="left"
+            android:orientation="vertical"
+            android:layout_marginLeft="45dp">
 
-            <Button
+            <ImageButton
                 android:id="@+id/button"
-                style="@style/buttonStyle"
-                android:layout_width="142dp"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
+                android:src="@drawable/mapslogo"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:background="#044cb1"
+                android:layout_gravity="left|center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="EMU MAP"
+                android:id="@+id/textView4"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/buttonshape"
-                android:text="GO TO MAP" />
+                android:layout_gravity="left|center_horizontal"
+                android:textColor="#A4A4A4"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                />
 
-            <Button
+            <ImageButton
                 android:id="@+id/button2"
-                style="@style/buttonStyle"
-                android:layout_width="142dp"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
+                android:src="@drawable/images"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:background="#044cb1"
+                android:layout_gravity="left|center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="ABOUT US"
+                android:id="@+id/textView3"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/buttonshape"
-                android:text="CLASSROOMS" />
+                android:layout_gravity="left|center_horizontal"
+                android:textColor="#A4A4A4"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
 
-            <Button
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="right"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="45dp">
+
+            <ImageButton
                 android:id="@+id/button4"
-                style="@style/buttonStyle"
-                android:layout_width="142dp"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/buttonshape"
-                android:text="ABOUT US" />
+                android:src="@drawable/buttonteaching"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:background="#044cb1"
+                android:layout_gravity="right|center_horizontal" />
 
-            <Button
-                android:id="@+id/button3"
-                style="@style/buttonStyle"
-                android:layout_width="142dp"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:background="@drawable/buttonshape"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="CLASSROOMS"
+                android:id="@+id/textView"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="right|center_horizontal"
+                android:textColor="#A4A4A4"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+            <ImageButton
+                android:id="@+id/button3"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="EXIT" />
+                android:src="@drawable/exit"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:background="#044cb1"
+                android:layout_gravity="right|center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="EXIT"
+                android:id="@+id/textView2"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="right|center_horizontal"
+                android:textColor="#A4A4A4"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
         </LinearLayout>
 
     </RelativeLayout>

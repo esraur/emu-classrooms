@@ -8,20 +8,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+
 
 public class MainPageActivity extends AppCompatActivity {
-Button GotoMapBtn;
-Button GotoClassrooms;
-Button ExitBtn;
-Button AboutusBtn;
+    ImageButton gotomap;
+    ImageButton classrooms;
+    ImageButton aboutus;
+    ImageButton exit;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+        gotomap = (ImageButton) findViewById(R.id.button);
+        classrooms = (ImageButton) findViewById(R.id.button4);
+        aboutus = (ImageButton) findViewById(R.id.button2);
+        exit = (ImageButton) findViewById(R.id.button3);
 
-
-        GotoMapBtn= (Button) findViewById(R.id.button);
-        GotoMapBtn.setOnClickListener(new View.OnClickListener() {
+        gotomap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainPageActivity.this, MainActivity.class);
@@ -29,8 +35,7 @@ Button AboutusBtn;
             }
         });
 
-        GotoClassrooms=(Button) findViewById(R.id.button2);
-        GotoClassrooms.setOnClickListener(new View.OnClickListener() {
+        classrooms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainPageActivity.this, ClassroomsMainActivity.class);
@@ -38,22 +43,19 @@ Button AboutusBtn;
             }
         });
 
-        ExitBtn=(Button) findViewById(R.id.button4);
-        ExitBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-        AboutusBtn=(Button) findViewById(R.id.button3);
-        AboutusBtn.setOnClickListener(new View.OnClickListener() {
+        aboutus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainPageActivity.this, AboutUsActivity.class);
                 startActivity(intent);
             }
         });
-
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 
